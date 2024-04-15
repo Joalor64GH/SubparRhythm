@@ -234,12 +234,12 @@ class TitleState extends BasicState
 		}
 	}
 
-	function getIntroText():Array<Dynamic>
+	function getIntroText():Array<Array<String>>
 	{
 		var rawText:String = Util.getText('data/introText.txt');
 
 		var array1:Array<String> = rawText.split("\n");
-		var swagArray:Array<Dynamic> = [];
+		var swagArray:Array<Array<String>> = [];
 
 		for (i in array1)
 		{
