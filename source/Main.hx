@@ -17,15 +17,13 @@ class Main extends Sprite
 	public function new()
 	{
 		super();
-		addChild(new FlxGame(gameDimensions[0], gameDimensions[1], defaultState, 1, defaultFPS, defaultFPS, true, false));
+		addChild(new FlxGame(gameDimensions[0], gameDimensions[1], defaultState, defaultFPS, defaultFPS, true, false));
 
 		#if html5
 		FlxG.autoPause = false;
 		#end
 
-		#if !mobile
 		display = new SimpleInfoDisplay(10, 3, 0xFFFFFF, "_sans");
 		addChild(display);
-		#end
 	}
 }
